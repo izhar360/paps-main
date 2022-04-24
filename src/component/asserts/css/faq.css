@@ -1,0 +1,82 @@
+.faq-heading {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 14px 0;
+  line-height: 17px;
+  font-family: "Epilogue SemiBold";
+}
+
+.faq-text {
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 20px;
+  font-size: 16px;
+  position: absolute;
+}
+
+.faq {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 4px;
+  position: relative;
+  text-align: left;
+  text-transform: capitalize;
+}
+.faq label {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding-top: 1px;
+  border-top: 1px solid #e1e1e1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq input[type="checkbox"] {
+  display: none;
+}
+.question-arrow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.down-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.faq input[type="checkbox"]:checked + label {
+  display: block;
+  height: fit-content;
+  transition: height 0.8s;
+}
+
+.faq input[type="checkbox"]:not(:checked) + label {
+  display: block;
+  transition: height 0.8s;
+  height: fit-content;
+  position: relative;
+}
+
+.faq input[type="checkbox"]:checked + label .faq-text {
+  position: relative !important;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-line {
+    background-image: url("../halftone.png");
+    background-size: cover;
+    border-radius: 10px;
+    background-color: #c6d7d5;
+    padding: 0 22px;
+    margin: 16px 0;
+    color: black;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faq {
+    width: 100%;
+  }
+}
